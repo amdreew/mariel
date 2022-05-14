@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>la mariel</title>
+    <style>
+        body {
+            font-size: 15px;
+            font-family: Segoe UI,SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;
+            min-width: 310px;
+            color: #000;
+            background-color: #CCC;
+        }
+    </style>
+</head>
+<body>
+   
+    <label for="numeroPersonasInpt">ingrese el numero de personas: </label>
+    <input type="number" id="numeroPersonasInpt">
+    <button onclick="prepararArroz()" >preparar arroz</button>
+
+   <script>
+
+    function prepararArroz() {    
+       console.log('receta del arroz de mariel');
+       let numeroPersonas = document.getElementById('numeroPersonasInpt').value;       
+       console.log('cual es el numero de personas?');       
+       console.log(`el numero de personas es: ${numeroPersonas} ... zhcjphvjipaidz`);
+       let esUnKilo;
+       if(numeroPersonas <= 2) {
+        console.log('preparare medio kilo de arroz');  
+        esUnKilo = false; 
+       } else {
+        console.log('preparare un kilo de arroz');
+        esUnKilo = true; 
+       } 
+    }      
+
+   </script>
+</body>
+</html>
