@@ -15,27 +15,32 @@
 </head>
 <body>
    
-    <label for="numeroPersonasInpt">ingrese el numero de personas: </label>
-    <input type="number" id="numeroPersonasInpt">
-    <button onclick="prepararArroz()" >preparar arroz</button>
+    <label for="lado1">ingrese el lado 1: </label>
+    <input type="number" id="lado1">
+    <label for="lado2">ingrese el lado 2: </label>
+    <input type="number" id="lado2">
+    <label for="lado3">ingrese el lado 3: </label>
+    <input type="number" id="lado3">
+    <button onclick="CalcularElTriangulo()" >determinar triangulo</button>
 
    <script>
 
-    function prepararArroz() {    
-       console.log('receta del arroz de mariel');
-       let numeroPersonas = document.getElementById('numeroPersonasInpt').value;       
-       console.log('cual es el numero de personas?');       
-       console.log(`el numero de personas es: ${numeroPersonas} ... zhcjphvjipaidz`);
-       let esUnKilo;
-       if(numeroPersonas <= 2) {
-        console.log('preparare medio kilo de arroz');  
-        esUnKilo = false; 
-       } else {
-        console.log('preparare un kilo de arroz');
-        esUnKilo = true; 
-        console.log('te queda de tarea el resto')
-       } 
-    }      
+    function CalcularElTriangulo() {    
+       console.log('determinado triangulo por sus lados');
+       const lado1 = document.getElementById('lado1').value; 
+       const lado2 = document.getElementById('lado2').value;
+       const lado3 = document.getElementById('lado3').value;   
+       
+        let lados = 3;
+        if (lado1===lado2 && lado2 ===lado3){
+            console.log('es un triangulo equilatero');
+        } else if(lado1 !==lado2 && lado2!==lado3 && lado3!==lado1) {
+            console.log('es un escaleno');
+        } else {
+            console.log('es un triangulo isoseles');
+        }
+
+    } 
 
    </script>
 </body>
