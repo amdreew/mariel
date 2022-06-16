@@ -45,3 +45,48 @@
    </script>
 </body>
 </html>
+
+<!--
+/******************************************************************************
+* PROGRAMA: TABLA BATCH_TAREAS                                            		  *
+*******************************************************************************
+* FECHA:    29 de Abril de 2022                                               * 
+*******************************************************************************
+* PROPOSITO:   Se crea tabla BATCH_TAREAS  Orquestar proceso batch desde un   *
+*              job                                                            *
+*                                                                             *
+*                                                                             *
+*******************************************************************************
+* SOLICITADO POR:      Armando Osorio                                         *
+*******************************************************************************
+* PRODUCTO: PEOPLE SOFT                                                       *
+*******************************************************************************
+* INGENIERO ENCARGADO: Miguel Andres Ospino                        		      *
+*******************************************************************************
+* MODIFICADOR POR:   [NOMBRE]                                                 *
+* FECHA MODIFIACIÓN: [FECHA]                                                  *
+* SOLICITADO POR:    [SOLICITANTE]                                            *
+* SOLICITUD NRO:     [SS – SI APLICA]                                         *
+* DECRIPCIÓN DE LA MODIFICACIÓN: [DESCRIPCIÓN]                                *
+******************************************************************************/
+SET VERI OFF
+ACCEPT tbs_tabla PROMPT "Tablespace tabla: "
+PROMPT "Creando Tabla BATCH_TAREAS"
+
+DROP TABLE BATCH_TAREAS;
+CREATE TABLE BATCH_TAREAS 
+(
+ID varchar2(50) NOT NULL,
+NOMBRE_BATCH varchar2(30) NOT NULL,
+ESTADO  varchar2(10) NOT NULL,
+FECHA_BATCH DATE NOT NULL 
+)TABLESPACE "&TBS_TABLA";
+
+ALTER TABLE BATCH_TAREAS ADD CONSTRAINT BATCH_TAREAS_PK PRIMARY KEY (ID);
+
+
+GRANT SELECT, INSERT, UPDATE, DELETE ON BATCH_TAREAS TO PUBLIC;
+/
+EXIT;
+
+-->
